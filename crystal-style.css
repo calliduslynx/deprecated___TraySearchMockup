@@ -1,0 +1,155 @@
+.button {
+	background-image: -moz-linear-gradient(left, #456789 0%, #ABCDEF 100%);
+	margin: 10px auto;
+	padding: 2px 15px;
+	border-radius: 12px;
+	border-top:    1px solid #DDDDDD;
+	border-left:   1px solid #DDDDDD;
+	border-bottom: 1px solid #222222;
+	border-right:  1px solid #222222;
+	transition:  0.5s;
+	opacity: 1;
+	width: 70%;
+	cursor: pointer;  
+}
+
+.button:hover {
+	width: 80%;
+    box-shadow: 0 8px 6px -6px black;
+}
+
+.button:active {
+	background-image: -moz-linear-gradient(left, #ABCDEF 0%, #FFFFFF 100%);
+    box-shadow: 0 8px 6px -6px black;
+    text-shadow: 0 0 10px #CCCCCC, 1px 1px #ffffff;
+}
+
+.buttonSelected {
+	background-image: -moz-linear-gradient(left, #89ABCD 0%, #FFFFFF 100%);
+	width: 80%;
+    box-shadow: 0 8px 6px -6px black;
+    text-shadow: 0 0 10px #CCCCCC, 1px 1px #ffffff;
+}
+/***************************************************************/
+.panelWithTitle {
+	border-radius: 15px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #DDDDDD #222222 #222222 #DDDDDD;
+	background: rgba(255,255,255,0.1);
+}
+
+.panelWithTitle h2 {
+	text-align: center;
+	color: white;
+	text-shadow: 0 0 10px #CCCCCC, 1px 1px #000000;
+	text-decoration: underline;
+	letter-spacing: 5px;
+	margin: 6px;
+	font-size: large;
+}
+/***************************************************************/
+.innerPanel {
+	border-radius: 15px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #222222 #DDDDDD #DDDDDD #222222;
+	background: rgba(255,255,255,0.1);
+}
+/***************************************************************/
+.keyValue {
+	display: table;
+	transition: 0.2s;
+	cursor: default;
+	width: 100%;
+}
+
+.keyValue:hover {
+	background: rgba(255,255,255,0.2);
+}
+
+.keyValue .key{
+	font-size: small;
+	text-align: left;
+	float: left;
+	padding: 2px 0px 2px 5px;
+	font-weight: bold;
+}
+
+.keyValue .value {
+	display: inline;
+	font-size: small;
+	text-align: right;
+	float: right;
+	padding-right: 5px;
+}
+/***************************************************************/
+.togglePanel {
+	border-radius: 15px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #DDDDDD #222222 #222222 #DDDDDD;
+	background: rgba(255,255,255,0.1);
+	/*transition: 0.3s;*/
+}
+
+.togglePanel:hover {
+	transition: 0.3s;
+    box-shadow: 0 8px 6px -6px black;
+	background: rgba(255,255,255,0.3);
+}
+
+.togglePanel div {
+	/*transition: opacity 0.2s linear 0s; */
+	overflow: hidden;
+}
+
+.togglePanel h2 {
+	text-align: center;
+	color: white;
+	text-shadow: 0 0 10px #CCCCCC, 1px 1px #000000;
+	text-decoration: none;
+	letter-spacing: 1px;
+	padding: 4px;
+	margin: 0px;
+	font-size: small;
+	cursor: pointer;
+	z-order: 10;
+}
+/***************************************************************/
+.list {
+	padding-bottom: 6px;
+}
+
+.list div{
+	/*transition: 0.2s;*/
+	cursor: default;
+	width: 100%;
+	text-align: center;
+	font-size: small;
+}
+
+.list div:hover {
+	background: rgba(255,255,255,0.2);
+}
+/***************************************************************/
+.collapsed {
+	height: 0px;
+	padding: 0px;
+}
+
+.invisible {
+	overflow: hidden !important;
+	height: 0px !important;
+	width: 0px !important;
+}
+/***************************************************************/
+.mainStyle {
+	border-radius: 30px;
+	background-image: -moz-linear-gradient(left, #456789 0%, #ABCDEF 100%);
+	border: 1px solid #DDD;
+	box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+	margin: 5px;
+	-moz-user-select: none;
+	cursor: default;
+}

@@ -1,0 +1,81 @@
+#main {
+	/*overflow: hidden;*/
+	position: absolute;
+	left: 10px;
+	right: 10px;
+	top: 10px;
+	bottom: 10px;
+}
+
+#leftBar {
+	width: 200px;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	bottom: 10px;
+}
+
+#infoPanel {
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	padding-bottom: 8px;
+}
+
+#itemPanel {
+	position: absolute;
+	left: 220px;
+	top: 10px;
+	right: 10px;
+	bottom: 10px;
+}
+
+#itemField {
+	position: absolute;
+	top: 32px;
+	left: 5px;
+	right: 5px;
+	bottom: 5px;
+	overflow-x: auto;
+    overflow-y: hidden;
+}
+
+#itemField > .togglePanel {
+	width: 150px;
+	margin: 4px;
+	position: absolute;
+}
+
+#itemField > .togglePanel:hover {
+	width: 155px;
+}
+
+#filterPanel {
+	margin-top: 10px;
+	padding: 3px;
+	transition: 0.5s;
+}
+
+#filterField {
+	width: 135px;
+	text-align: right;
+}
+
+#collapseAllItems {
+	position: absolute;
+	top: -5px;
+	right: 20px;
+	width: 21px;
+	text-align: center;
+	padding: 0px;
+}
+
+#expandAllItems {
+	position: absolute;
+	top: -5px;
+	right: 45px;
+	width: 21px;
+	text-align: center;
+	padding: 0px;	
+}

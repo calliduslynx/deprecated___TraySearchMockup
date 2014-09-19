@@ -1,0 +1,37 @@
+=== boxing ===
+* width gibt breite von inhalt, ohne padding, rahmen, margin
+
+=== position ===
+* static:
+**(Standard)
+** entsprechend des definierten flows (block) untereinander
+** es wird kein Koordinatensystem für Kinder erzeugt
+
+* relativ:
+** Bezugspunkt nicht Elternelement sondern die Position, die es bei static hätte
+*** ohne weitere Angaben sieht es also genau wie static aus
+** jetzt funktionieren top,left,right,bottom 
+** nachfolgende Divs gehen auch davon aus als wenn static genommen	worden wäre
+** es wird ein funktionierendes Koordinatensystem für Kindelelemente erzeugt
+
+* absolut:
+** jetzt funktionieren top,left,right,bottom (gehen natürlich auch mit %)
+*** sind alle angegeben kann man auf width, height verzichten
+** Elternelement muss absolut oder relativ sein
+** beeinflusst keine anderen elemente
+** wird nicht beeinflusst von anderen elementen
+** es wird ein funktionierendes Koordinatensystem für Kindelelemente erzeugt
+** bei nicht angegebenen werten werden im Hintergrund gleiche Werte wie bei static verwendet 
+
+
+* fixed:
+** Bezugspunkt: Viewport, unabhängig von Elternelement oder Body
+** steht unabhängig vom Scrollen immer an der Position im Fenster
+
+* inherit:
+** erbt Eigenschaft von Eltern
+
+=== floating ===
+* float: left, right, none
+* positioniert div, links oder rechts von eltern div und lässt den text umfließen
+* floating kann mit clear:both; aufgehoben werden 

@@ -1,0 +1,160 @@
+<html>
+<head>
+<title>
+Tray Search
+</title>
+<script type="text/javascript" src="jquery-1.8.2.min.js"></script>
+<script type="text/javascript">
+$( function(){
+	// add listener for location selection 
+	$(".location").click( function(e){
+		console.log(e.currentTarget);
+		$(".location").removeClass("selected");
+		$(e.currentTarget).addClass("selected");
+	});
+	
+	// set min height for main 
+	$("#main").css("minHeight", $("#info_panel").height() + $("#loc_panel").height() + 20);
+	
+	// set width of itemPanel based on width of main 
+	// $("#itemPanel").width( $("#main").width() - 212)
+} );
+</script>
+
+<!-- 
+float:
+position:
+ -->
+
+<style type="text/css">
+.location {
+	background-image: -moz-linear-gradient(left, #456789 0%, #ABCDEF 100%);
+	margin: 10px auto;
+	padding: 2px 15px;
+	border-radius: 12px;
+	border-top:    1px solid #DDDDDD;
+	border-left:   1px solid #DDDDDD;
+	border-bottom: 1px solid #222222;
+	border-right:  1px solid #222222;
+	transition:  0.5s;
+	opacity: 1;
+	width: 70%;
+	cursor: pointer; 
+}
+
+.location:hover {
+	width: 80%;
+    box-shadow: 0 8px 6px -6px black;
+}
+
+.selected {
+	background-image: -moz-linear-gradient(left, #89ABCD 0%, #FFFFFF 100%);
+	width: 80%;
+    box-shadow: 0 8px 6px -6px black;
+    text-shadow: 0 0 10px #CCCCCC, 1px 1px #ffffff;
+}
+
+
+.panel {
+	width: 100%;
+	height: 1%;
+	display: table;
+	border-radius: 15px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #DDDDDD #222222 #222222 #DDDDDD;
+	background: rgba(255,255,255,0.1);
+}
+
+.panel h2 {
+	text-align: center;
+	color: white;
+	text-shadow: 0 0 10px #CCCCCC, 1px 1px #000000;
+	text-decoration: underline;
+	letter-spacing: 5px;
+	margin: 6px;
+	font-size: large;
+}
+
+.infoItem {
+	display: table-row;
+	transition: 0.2s;
+	cursor: default;
+}
+
+.infoItem:hover {
+	background: rgba(255,255,255,0.2);
+}
+
+.infoItem .label{
+	font-size: small;
+	text-align: left;
+	float: left;
+	padding: 2px 0px 2px 5px;
+	font-weight: bold;
+}
+
+.infoItem .value {
+	display: inline;
+	font-size: small;
+	text-align: right;
+	float: right;
+	padding-right: 5px;
+}
+	
+.main {
+	border-radius: 30px;
+	background-image: -moz-linear-gradient(left, #456789 0%, #ABCDEF 100%);
+	width: 97%;
+	height: 94%;
+	border: 1px solid #DDD;
+	box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+	overflow: hidden;
+	padding: 10px;
+	-moz-user-select: none;
+	cursor: default;
+}
+
+</style>
+</head>
+
+<body style="margin: 0px; width: 100%; height: 100%; position: fixed">
+
+
+
+<div id="main" class="main">
+	<div id="left_bar" style="width: 200px; height: 100%; float: left; position: relative; top: 0px; left: 0px">
+		<div id="loc_panel" class="panel" style="width: 100%">
+			<h2>Orte</h2>
+			<div class="location">Lager Steril</div>
+			<div class="location">Lager Unsteril</div>
+			<div class="location">OP 1</div>
+			<div class="location">OP 2</div>
+			<div class="location">OP 3</div>
+			<hr />
+			<div class="location">Unbekannt</div>
+			<div class="location">Alle</div>
+			
+		</div>
+		<div id="info_panel" class="panel" style="padding-bottom: 8px; width: 100%; position: absolute; bottom: 0px">
+			<h2>Info</h2>
+			<div class="infoItem"><div class="label">Name:</div><div class="value">1-00-001</div></div>
+			<div class="infoItem"><div class="label">Typ:</div><div class="value">App/Hernie</div></div>
+			<div class="infoItem"><div class="label">Steril bis:</div><div class="value">20.01.2013</div></div>
+		</div>
+	</div>
+
+
+	<div id="itemPanel" 
+		style="width: 800px; position: relative; left: 10px; top: 0px; height:100%"
+		class="panel">
+		<h2>Sterilgueter</h2>
+		
+	</div>
+
+</div>
+
+
+</body>
+
+</html>

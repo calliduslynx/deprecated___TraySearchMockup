@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>
+Tray Search
+</title>
+<script type="text/javascript" src="jquery-1.8.2.min.js"></script>
+<script type="text/javascript">
+$( function(){
+} );
+</script>
+<!-- 
+float:
+position:
+ -->
+
+<style type="text/css">
+.main {
+	background: #f00;
+    height: 500px;
+    width: 500px;
+    padding: 10px;
+    position: fixed; /*<-- important!*/
+}
+
+.a {
+	background: #0f0;
+	height: 100%;
+    width: 100px;
+}
+
+.b {
+	background: #00f;
+
+	/* following both set enables to use top, botton, left and right */
+    overflow: auto; 
+    position: absolute;
+
+	bottom: 1px;
+    left: 121px;
+    right: 1px;
+    top: 1px;
+}
+
+</style>
+</head>
+
+<body>
+
+
+
+<div id="main" class="main">
+	<div id="a" class="a"></div>
+	<div id="b" class="b"></div>
+</div>
+
+
+</body>
+
+</html>

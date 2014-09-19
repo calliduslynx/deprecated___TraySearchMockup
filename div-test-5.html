@@ -1,0 +1,89 @@
+<html>
+<head>
+<title>
+Tray Search
+</title>
+<script type="text/javascript" src="jquery-1.8.2.min.js"></script>
+<script type="text/javascript">
+$( function(){
+	$(".togglePanel h2").click( function(e){
+		console.log("clicked");
+		
+		$div = $(e.currentTarget.parentNode.querySelector("div"));
+
+		if( $div.hasClass("collapsed") ){
+			$div.toggleClass("collapsed")
+		}else{
+			setTimeout('$div.toggleClass("collapsed");', 1000);
+		}
+		
+		$div.toggleClass("transparent");
+	});
+} );
+</script>
+
+<style type="text/css">
+.togglePanel {
+	border-radius: 15px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #DDDDDD #222222 #222222 #DDDDDD;
+	background: rgba(255,255,255,0.1);
+    max-height: 5000px;
+}
+.collapsed {
+	height: 0px;
+}
+.transparent {
+	opacity: 0;
+}
+
+.togglePanel div {
+	transition: all 1s linear 0s;
+	overflow: hidden;
+}
+
+.togglePanel h2 {
+	text-align: center;
+	color: white;
+	text-shadow: 0 0 10px #CCCCCC, 1px 1px #000000;
+	text-decoration: underline;
+	letter-spacing: 5px;
+	margin: 6px;
+	font-size: large;
+	cursor: pointer;
+}
+
+</style>
+</head>
+
+<body>
+This tests shows how to have a togglePanel with small effect.
+<div id="box_1" class="togglePanel">
+	<h2>App/Hernie</h2>
+	<div>
+		<ul>
+			<li>1-00-001</li>
+			<li>1-00-002</li>
+			<li>1-00-003</li>
+		</ul>
+	</div>
+</div>
+
+<div id="box_2" class="togglePanel">
+	<h2>Gyn</h2>
+	<div>
+		<ul>
+			<li>1-01-001</li>
+			<li>1-01-002</li>
+			<li>1-01-003</li>
+		</ul>
+	</div>
+</div>
+
+
+</body>
+
+</html>
+
+

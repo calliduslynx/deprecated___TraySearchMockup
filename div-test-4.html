@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>
+Tray Search
+</title>
+<script type="text/javascript" src="jquery-1.8.2.min.js"></script>
+<script type="text/javascript">
+$( function(){
+	$(".togglePanel h2").click( function(e){
+		$div = $(e.currentTarget.parentNode.querySelector("div"));
+
+		if( $div.hasClass("hidden") ){
+			$div.toggleClass("hidden")
+		}else{
+			setTimeout('$div.toggleClass("hidden");', 1000);
+		}
+		
+		$div.toggleClass("transparent");
+		x = $div;
+		
+	});
+} );
+</script>
+
+<style type="text/css">
+.togglePanel {
+	background: red;
+}
+
+.togglePanel div {
+	transition: 1s;
+}
+
+.transparent {
+	opacity: 0;
+    transition: 1s;
+}
+
+.hidden {
+	height: 0px;
+}
+
+</style>
+</head>
+
+<body>
+<div id="box_1" class="togglePanel">
+	<h2>App/Hernie</h2>
+	<div>
+		<ul>
+			<li>1-00-001</li>
+			<li>1-00-002</li>
+			<li>1-00-003</li>
+		</ul>
+	</div>
+</div>
+
+
+</body>
+
+</html>
+
+
